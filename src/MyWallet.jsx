@@ -1,6 +1,14 @@
 import React, { useEffect } from "react";
 import { A, B, C, D, E } from "./MyWalletStyles";
-import { useAccount, useConnect, useDisconnect, useSignTypedData } from "@starknet-react/core";
+import {
+  useAccount,
+  useBalance,
+  useConnect,
+  useDisconnect,
+  useNetwork,
+  useProvider,
+  useSignTypedData,
+} from "@starknet-react/core";
 import Loader from "./Loader";
 
 const MyWallet = () => {
@@ -22,9 +30,40 @@ const MyWallet = () => {
   };
   const { data, isPending, signTypedData } = useSignTypedData(exampleData);
 
+  const { provider } = useProvider();
+  const {
+    chain: { id, name },
+  } = useNetwork();
+
+  const {
+    isLoading,
+    isError,
+    error,
+    data: balanceData,
+  } = useBalance({
+    address,
+    watch: true,
+  });
+
   useEffect(() => {
-    if (isConnected) console.log(address);
-  }, [isConnected]);
+    console.log("Connected chain: ", name);
+    console.log("Connected chain id: ", id);
+  }, [id, name]);
+
+  useEffect(() => {
+    if (!isError && isLoading) {
+      console.log("Balance is loading...");
+    }
+    if (isError) {
+      console.log("Error in getting the balance...");
+      console.log(address);
+      console.log("Error message:", error.message);
+    }
+
+    if (balanceData) {
+      console.log("Balance is: ", balanceData);
+    }
+  }, [balanceData, isError, isLoading]);
 
   return (
     <A>
