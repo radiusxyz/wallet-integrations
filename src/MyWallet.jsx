@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import { A, B, C, D, E } from "./MyWalletStyles";
+import { A, B, C, D, E, F } from "./MyWalletStyles";
 import {
   useAccount,
   useBalance,
   useConnect,
+  useContractWrite,
   useDisconnect,
   useNetwork,
   useProvider,
@@ -65,13 +66,24 @@ const MyWallet = () => {
     }
   }, [balanceData, isError, isLoading]);
 
+  const calls = [
+    {
+      contractAddress: "0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7",
+      entrypoint: "transfer",
+      calldata: ["0x04D6029994c9CE393C66c759d1152ca05EA412318ff45D4d2439ee68F350Eb96", "10000000", 0],
+    },
+  ];
+
+  const { write } = useContractWrite({ calls });
+
   return (
     <A>
-      <B onClick={() => connect({ connector: connectors[1] })}>Connect</B>
+      <B onClick={() => connect({ connector: connectors[0] })}>Connect</B>
       <C onClick={() => disconnect()}>Disconnect</C>
       <D onClick={() => signTypedData(exampleData)}>Sign</D>
       {isPending && <Loader message='Pending signature...' />}
       {data && <E>{data}</E>}
+      <F onClick={() => write()}>Transferros Tokenados</F>
     </A>
   );
 };

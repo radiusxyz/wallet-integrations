@@ -2,6 +2,8 @@ import { StarknetConfig, publicProvider, argent, braavos } from "@starknet-react
 import { goerli } from "@starknet-react/chains";
 import MyWallet from "./MyWallet";
 import { useInjectedConnectors } from "@starknet-react/core";
+import { mainnet } from "@starknet-react/chains";
+import { sepolia } from "@starknet-react/chains";
 
 function App() {
   const chains = [goerli];

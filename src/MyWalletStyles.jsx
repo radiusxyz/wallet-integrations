@@ -52,3 +52,7 @@ export const E = styled.p`
   font-weight: bold;
   font-size: 40px;
 `;
+
+export const F = styled(B)`
+  background: cyan;
+`;
