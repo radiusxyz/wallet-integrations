@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const FullPageBackdrop = styled.div`
   position: fixed;
@@ -6,7 +6,7 @@ const FullPageBackdrop = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); // Semi-transparent backdrop
+  background-color: rgba(0, 0, 0, 0.93); // Semi-transparent backdrop
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,17 +29,17 @@ const CircularLoader = styled.div`
 `;
 
 const Loading = styled.span`
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   color: white;
   font-weight: 600;
   font-size: 18px;
 `;
 
-const Loader = () => {
+const Loader = ({ message }) => {
   return (
     <FullPageBackdrop>
       <CircularLoader />
-      <Loading> Loading data...</Loading>
+      <Loading>{message}</Loading>
     </FullPageBackdrop>
   );
 };
