@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { A, B, C, D, E, F } from "./MyWalletStyles";
 import {
   useAccount,
@@ -16,6 +16,8 @@ const MyWallet = () => {
   const { connect, connectors } = useConnect();
   const { disconnect } = useDisconnect();
   const { address, isConnected, isReconnecting, account } = useAccount();
+  const [signedTx, setSignedTx] = useState("");
+  const [txDetails, setTxDetails] = useState({});
   const exampleData = {
     "types": {
       "StarkNetDomain": [{ "name": "version", "type": "felt" }],
@@ -29,6 +31,7 @@ const MyWallet = () => {
       "contents": "Hello World",
     },
   };
+
   const { data, isPending, signTypedData } = useSignTypedData(exampleData);
 
   const { provider } = useProvider();
@@ -76,11 +79,58 @@ const MyWallet = () => {
 
   const { write } = useContractWrite({ calls });
 
+  //   useEffect(() => {
+  //     console.log(
+  //       account.signer.signTransaction(calls, {
+  //         version: "0x2",
+  //         walletAddress: "0x64b48806902a367c8598f4f95c305e8c1a1acba5f082d294a43793113115691",
+  //         cairoVersion: "1",
+  //         chainId: constants.StarknetChainId.SN_SEPOLIA,
+  //         nonce: 45,
+  //         maxFee: 10 ** 15,
+  //       })
+  //     );
+  //   }, []);
+
+  useEffect(() => {
+    if (!isConnected) return;
+    const getDetails = async () => {
+      console.log(account);
+      const nonce = await account.getNonce();
+      const walletAddress = account.address;
+      const cairoVersion = "1";
+      const chainId = account.provider.chainId;
+      const maxFee = 10 ** 15;
+      setTxDetails({
+        nonce,
+        version: "0x2",
+        walletAddress,
+        cairoVersion,
+        chainId,
+        maxFee,
+      });
+    };
+    getDetails();
+  }, [isConnected]);
+
+  useEffect(() => {
+    // console.log("signed tx", signedTx);
+  }, [signedTx]);
+
   return (
     <A>
       <B onClick={() => connect({ connector: connectors[0] })}>Connect</B>
       <C onClick={() => disconnect()}>Disconnect</C>
-      <D onClick={() => signTypedData(exampleData)}>Sign</D>
+      <D
+        onClick={async () => {
+          const signature = await account.signer.signTransaction(calls, txDetails);
+          console.log(signature);
+          setSignedTx(signature);
+          const signMessage = signTypedData(exampleData);
+        }}
+      >
+        Sign
+      </D>
       {isPending && <Loader message='Pending signature...' />}
       {data && <E>{data}</E>}
       <F onClick={() => write()}>Transferros Tokenados</F>
