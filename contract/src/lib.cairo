@@ -1,6 +1,39 @@
-fn fib(a: felt252, b: felt252, n: felt252) -> felt252 {
-    match n {
-        0 => a,
-        _ => fib(b, a + b, n - 1),
+#[starknet::interface]
+trait ISimpleCounter<TContractState> {
+    fn get_current_count(self: @TContractState) -> u32;
+    fn increment(ref self: TContractState);
+    fn decrement(ref self: TContractState);
+}
+
+#[starknet::contract]
+mod SimpleCounter {
+    #[storage]
+    struct Storage {
+        // Counter variable
+        counter: u32,
+    }
+
+    #[constructor]
+    fn constructor(ref self: ContractState) {
+        // Store initial value
+        self.counter.write(1);
+    }
+
+    #[external(v0)]
+    impl SimpleCounter of super::ISimpleCounter<ContractState> {
+        fn get_current_count(self: @ContractState) -> u32 {
+            return self.counter.read();
+        }
+
+        fn increment(ref self: ContractState) {
+            // Store counter value + 1
+            let counter = self.counter.read() + 1;
+            self.counter.write(counter);
+        }
+        fn decrement(ref self: ContractState) {
+            // Store counter value - 1
+            let counter = self.counter.read() - 1;
+            self.counter.write(counter);
+        }
     }
 }
