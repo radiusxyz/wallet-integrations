@@ -1,0 +1,22 @@
+{
+  "abi": [
+    { "type": "impl", "name": "SimpleCounter", "interface_name": "counter_contract::ISimpleCounter" },
+    {
+      "type": "interface",
+      "name": "counter_contract::ISimpleCounter",
+      "items": [
+        {
+          "type": "function",
+          "name": "get_current_count",
+          "inputs": [],
+          "outputs": [{ "type": "core::integer::u32" }],
+          "state_mutability": "view"
+        },
+        { "type": "function", "name": "increment", "inputs": [], "outputs": [], "state_mutability": "external" },
+        { "type": "function", "name": "decrement", "inputs": [], "outputs": [], "state_mutability": "external" }
+      ]
+    },
+    { "type": "constructor", "name": "constructor", "inputs": [] },
+    { "type": "event", "name": "counter_contract::SimpleCounter::Event", "kind": "enum", "variants": [] }
+  ]
+}
