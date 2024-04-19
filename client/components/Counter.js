@@ -1,5 +1,5 @@
 "use client";
-const { useState } = require("react");
+const { useState, useEffect } = require("react");
 import useLoader from "@/hooks/useLoader";
 import useWallet from "@/hooks/useWallet";
 import { Contract, RpcProvider } from "starknet";
@@ -9,6 +9,20 @@ const CONTRACT_ADDRESS = "0x4672ee7fd79bc7cf2df7d4d361ad5c3614f1fb84cd9fa5664ae4
 const contractABI = require("../lib/ContractABI.json");
 const rpcProvider = new RpcProvider({ nodeUrl: "http://localhost:9944" });
 const contract = new Contract(contractABI.abi, CONTRACT_ADDRESS, rpcProvider);
+
+const exampleData = {
+  "types": {
+    "StarkNetDomain": [{ "name": "version", "type": "felt" }],
+    "Msg": [{ "name": "contents", "type": "felt" }],
+  },
+  "primaryType": "Msg",
+  "domain": {
+    "version": "1",
+  },
+  "message": {
+    "contents": "Hello World",
+  },
+};
 
 const Counter = () => {
   const [count, setCount] = useState(null);
@@ -90,6 +104,20 @@ const Counter = () => {
             Connect Wallet
           </button>
         )}
+      </div>
+      <div className='flex space-x-4 mt-24'>
+        <button
+          id='sign'
+          className='bg-red-500 text-white px-4 py-2 rounded w-full'
+          onClick={async () => {
+            console.log("clicked");
+            const signature = await connection.account.signMessage(exampleData);
+            console.log(signature);
+          }}
+          style={{ fontSize: "1.5rem" }}
+        >
+          Sign typedData
+        </button>
       </div>
     </div>
   );
