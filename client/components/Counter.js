@@ -5,7 +5,7 @@ import useWallet from "@/hooks/useWallet";
 import { Contract, RpcProvider } from "starknet";
 
 // TODO: Replace CONTRACT_ADDRESS with your deployed contract address
-const CONTRACT_ADDRESS = "0x2288d3c507abfb963730c97a72836222ffe34e0d4fd963dbf9c6e1ecdca5a1";
+const CONTRACT_ADDRESS = "0x4672ee7fd79bc7cf2df7d4d361ad5c3614f1fb84cd9fa5664ae433e0e40c17a";
 const contractABI = require("../lib/ContractABI.json");
 const rpcProvider = new RpcProvider({ nodeUrl: "http://localhost:9944" });
 const contract = new Contract(contractABI.abi, CONTRACT_ADDRESS, rpcProvider);

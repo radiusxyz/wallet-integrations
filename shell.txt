@@ -1,0 +1,7 @@
+scarb build
+
+node scripts/declare.js ./contracts/counter_contract_SimpleCounter.sierra.json ./contracts/counter_contract_SimpleCounter.casm.json
+
+node scripts/deploy.js ./contracts/counter_contract_SimpleCounter.sierra.json
+
+node scripts/faucet.js 
