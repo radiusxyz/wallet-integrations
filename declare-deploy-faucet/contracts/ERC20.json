@@ -2147,10 +2147,7 @@
     "hints": {
       "0": [
         {
-          "accessible_scopes": [
-            "starkware.cairo.common.alloc",
-            "starkware.cairo.common.alloc.alloc"
-          ],
+          "accessible_scopes": ["starkware.cairo.common.alloc", "starkware.cairo.common.alloc.alloc"],
           "code": "memory[ap] = segments.add()",
           "flow_tracking_data": {
             "ap_tracking": {
@@ -2217,10 +2214,7 @@
       ],
       "39": [
         {
-          "accessible_scopes": [
-            "starkware.starknet.common.syscalls",
-            "starkware.starknet.common.syscalls.emit_event"
-          ],
+          "accessible_scopes": ["starkware.starknet.common.syscalls", "starkware.starknet.common.syscalls.emit_event"],
           "code": "syscall_handler.emit_event(segments=segments, syscall_ptr=ids.syscall_ptr)",
           "flow_tracking_data": {
             "ap_tracking": {
@@ -2235,10 +2229,7 @@
       ],
       "42": [
         {
-          "accessible_scopes": [
-            "starkware.cairo.common.math",
-            "starkware.cairo.common.math.assert_not_zero"
-          ],
+          "accessible_scopes": ["starkware.cairo.common.math", "starkware.cairo.common.math.assert_not_zero"],
           "code": "from starkware.cairo.common.math_utils import assert_integer\nassert_integer(ids.value)\nassert ids.value % PRIME != 0, f'assert_not_zero failed: {ids.value} = 0.'",
           "flow_tracking_data": {
             "ap_tracking": {
@@ -2253,10 +2244,7 @@
       ],
       "47": [
         {
-          "accessible_scopes": [
-            "starkware.cairo.common.math",
-            "starkware.cairo.common.math.assert_nn"
-          ],
+          "accessible_scopes": ["starkware.cairo.common.math", "starkware.cairo.common.math.assert_nn"],
           "code": "from starkware.cairo.common.math_utils import assert_integer\nassert_integer(ids.a)\nassert 0 <= ids.a % PRIME < range_check_builtin.bound, f'a = {ids.a} is out of range.'",
           "flow_tracking_data": {
             "ap_tracking": {
@@ -2271,10 +2259,7 @@
       ],
       "56": [
         {
-          "accessible_scopes": [
-            "starkware.cairo.common.math",
-            "starkware.cairo.common.math.assert_250_bit"
-          ],
+          "accessible_scopes": ["starkware.cairo.common.math", "starkware.cairo.common.math.assert_250_bit"],
           "code": "from starkware.cairo.common.math_utils import as_int\n\n# Correctness check.\nvalue = as_int(ids.value, PRIME) % PRIME\nassert value < ids.UPPER_BOUND, f'{value} is outside of the range [0, 2**250).'\n\n# Calculation for the assertion.\nids.high, ids.low = divmod(ids.value, ids.SHIFT)",
           "flow_tracking_data": {
             "ap_tracking": {
@@ -2291,10 +2276,7 @@
       ],
       "69": [
         {
-          "accessible_scopes": [
-            "starkware.cairo.common.math",
-            "starkware.cairo.common.math.assert_le_felt"
-          ],
+          "accessible_scopes": ["starkware.cairo.common.math", "starkware.cairo.common.math.assert_le_felt"],
           "code": "import itertools\n\nfrom starkware.cairo.common.math_utils import assert_integer\nassert_integer(ids.a)\nassert_integer(ids.b)\na = ids.a % PRIME\nb = ids.b % PRIME\nassert a <= b, f'a = {a} is not less than or equal to b = {b}.'\n\n# Find an arc less than PRIME / 3, and another less than PRIME / 2.\nlengths_and_indices = [(a, 0), (b - a, 1), (PRIME - 1 - b, 2)]\nlengths_and_indices.sort()\nassert lengths_and_indices[0][0] <= PRIME // 3 and lengths_and_indices[1][0] <= PRIME // 2\nexcluded = lengths_and_indices[2][1]\n\nmemory[ids.range_check_ptr + 1], memory[ids.range_check_ptr + 0] = (\n    divmod(lengths_and_indices[0][0], ids.PRIME_OVER_3_HIGH))\nmemory[ids.range_check_ptr + 3], memory[ids.range_check_ptr + 2] = (\n    divmod(lengths_and_indices[1][0], ids.PRIME_OVER_2_HIGH))",
           "flow_tracking_data": {
             "ap_tracking": {
@@ -2311,10 +2293,7 @@
       ],
       "79": [
         {
-          "accessible_scopes": [
-            "starkware.cairo.common.math",
-            "starkware.cairo.common.math.assert_le_felt"
-          ],
+          "accessible_scopes": ["starkware.cairo.common.math", "starkware.cairo.common.math.assert_le_felt"],
           "code": "memory[ap] = 1 if excluded != 0 else 0",
           "flow_tracking_data": {
             "ap_tracking": {
@@ -2327,10 +2306,7 @@
       ],
       "93": [
         {
-          "accessible_scopes": [
-            "starkware.cairo.common.math",
-            "starkware.cairo.common.math.assert_le_felt"
-          ],
+          "accessible_scopes": ["starkware.cairo.common.math", "starkware.cairo.common.math.assert_le_felt"],
           "code": "memory[ap] = 1 if excluded != 1 else 0",
           "flow_tracking_data": {
             "ap_tracking": {
@@ -2343,10 +2319,7 @@
       ],
       "105": [
         {
-          "accessible_scopes": [
-            "starkware.cairo.common.math",
-            "starkware.cairo.common.math.assert_le_felt"
-          ],
+          "accessible_scopes": ["starkware.cairo.common.math", "starkware.cairo.common.math.assert_le_felt"],
           "code": "assert excluded == 2",
           "flow_tracking_data": {
             "ap_tracking": {
@@ -2397,10 +2370,7 @@
       ],
       "154": [
         {
-          "accessible_scopes": [
-            "starkware.cairo.common.math_cmp",
-            "starkware.cairo.common.math_cmp.is_nn"
-          ],
+          "accessible_scopes": ["starkware.cairo.common.math_cmp", "starkware.cairo.common.math_cmp.is_nn"],
           "code": "memory[ap] = 0 if 0 <= (ids.a % PRIME) < range_check_builtin.bound else 1",
           "flow_tracking_data": {
             "ap_tracking": {
@@ -2415,10 +2385,7 @@
       ],
       "164": [
         {
-          "accessible_scopes": [
-            "starkware.cairo.common.math_cmp",
-            "starkware.cairo.common.math_cmp.is_nn"
-          ],
+          "accessible_scopes": ["starkware.cairo.common.math_cmp", "starkware.cairo.common.math_cmp.is_nn"],
           "code": "memory[ap] = 0 if 0 <= ((-ids.a - 1) % PRIME) < range_check_builtin.bound else 1",
           "flow_tracking_data": {
             "ap_tracking": {
@@ -2433,10 +2400,7 @@
       ],
       "199": [
         {
-          "accessible_scopes": [
-            "starkware.cairo.common.uint256",
-            "starkware.cairo.common.uint256.uint256_add"
-          ],
+          "accessible_scopes": ["starkware.cairo.common.uint256", "starkware.cairo.common.uint256.uint256_add"],
           "code": "sum_low = ids.a.low + ids.b.low\nids.carry_low = 1 if sum_low >= ids.SHIFT else 0\nsum_high = ids.a.high + ids.b.high + ids.carry_low\nids.carry_high = 1 if sum_high >= ids.SHIFT else 0",
           "flow_tracking_data": {
             "ap_tracking": {

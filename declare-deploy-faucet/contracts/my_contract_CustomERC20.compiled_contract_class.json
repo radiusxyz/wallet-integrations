@@ -2,6 +2,95 @@
   "prime": "0x800000000000011000000000000000000000000000000000000000000000001",
   "compiler_version": "2.6.3",
   "bytecode": [
+    "0xa0680017fff8000",
+    "0x7",
+    "0x482680017ffa8000",
+    "0x100000000000000000000000000000000",
+    "0x400280007ff97fff",
+    "0x10780017fff7fff",
+    "0x45",
+    "0x4825800180007ffa",
+    "0x0",
+    "0x400280007ff97fff",
+    "0x482680017ff98000",
+    "0x1",
+    "0x48297ffc80007ffd",
+    "0x20680017fff7fff",
+    "0x4",
+    "0x10780017fff7fff",
+    "0x10",
+    "0x40780017fff7fff",
+    "0x1",
+    "0x480680017fff8000",
+    "0x496e70757420746f6f206c6f6e6720666f7220617267756d656e7473",
+    "0x400080007ffe7fff",
+    "0x48127ffc7fff8000",
+    "0x48127ffa7fff8000",
+    "0x480a7ffb7fff8000",
+    "0x480680017fff8000",
+    "0x1",
+    "0x48127ffa7fff8000",
+    "0x482480017ff98000",
+    "0x1",
+    "0x208b7fff7fff7ffe",
+    "0x1104800180018000",
+    "0x2354",
+    "0x482480017fff8000",
+    "0x2353",
+    "0x480080007fff8000",
+    "0xa0680017fff8000",
+    "0x9",
+    "0x4824800180007ff8",
+    "0x0",
+    "0x482480017fff8000",
+    "0x100000000000000000000000000000000",
+    "0x400080007ff77fff",
+    "0x10780017fff7fff",
+    "0x10",
+    "0x4824800180007ff8",
+    "0x0",
+    "0x400080007ff87fff",
+    "0x40780017fff7fff",
+    "0x1",
+    "0x482480017ff78000",
+    "0x1",
+    "0x48127ffd7fff8000",
+    "0x480a7ffb7fff8000",
+    "0x480680017fff8000",
+    "0x0",
+    "0x48127ffb7fff8000",
+    "0x48127ffa7fff8000",
+    "0x208b7fff7fff7ffe",
+    "0x40780017fff7fff",
+    "0x1",
+    "0x480680017fff8000",
+    "0x4f7574206f6620676173",
+    "0x400080007ffe7fff",
+    "0x482480017ff58000",
+    "0x1",
+    "0x48127ff37fff8000",
+    "0x480a7ffb7fff8000",
+    "0x480680017fff8000",
+    "0x1",
+    "0x48127ffa7fff8000",
+    "0x482480017ff98000",
+    "0x1",
+    "0x208b7fff7fff7ffe",
+    "0x40780017fff7fff",
+    "0x1",
+    "0x480680017fff8000",
+    "0x4f7574206f6620676173",
+    "0x400080007ffe7fff",
+    "0x482680017ff98000",
+    "0x1",
+    "0x480a7ffa7fff8000",
+    "0x480a7ffb7fff8000",
+    "0x480680017fff8000",
+    "0x1",
+    "0x48127ffa7fff8000",
+    "0x482480017ff98000",
+    "0x1",
+    "0x208b7fff7fff7ffe",
     "0x40780017fff7fff",
     "0x5",
     "0xa0680017fff8000",
@@ -8990,12 +9079,40 @@
     "0x208b7fff7fff7ffe"
   ],
   "bytecode_segment_lengths": [
-    547, 230, 341, 252, 368, 455, 368, 156, 156, 93, 230, 341, 455, 223, 350, 92, 204, 197, 806, 149, 192, 262, 66, 117,
-    165, 180, 156, 30, 282, 214, 720, 149, 172, 66, 202
+    89, 547, 230, 341, 252, 368, 455, 368, 156, 156, 93, 230, 341, 455, 223, 350, 92, 204, 197, 806, 149, 192, 262, 66,
+    117, 165, 180, 156, 30, 282, 214, 720, 149, 172, 66, 202
   ],
   "hints": [
     [
-      2,
+      0,
+      [
+        {
+          "TestLessThanOrEqual": {
+            "lhs": { "Immediate": "0x0" },
+            "rhs": { "Deref": { "register": "FP", "offset": -6 } },
+            "dst": { "register": "AP", "offset": 0 }
+          }
+        }
+      ]
+    ],
+    [17, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [
+      36,
+      [
+        {
+          "TestLessThanOrEqual": {
+            "lhs": { "Immediate": "0x0" },
+            "rhs": { "Deref": { "register": "AP", "offset": -7 } },
+            "dst": { "register": "AP", "offset": 0 }
+          }
+        }
+      ]
+    ],
+    [48, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [59, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [74, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [
+      91,
       [
         {
           "TestLessThanOrEqual": {
@@ -9007,7 +9124,7 @@
       ]
     ],
     [
-      36,
+      125,
       [
         {
           "TestLessThan": {
@@ -9019,7 +9136,7 @@
       ]
     ],
     [
-      40,
+      129,
       [
         {
           "LinearSplit": {
@@ -9033,7 +9150,7 @@
       ]
     ],
     [
-      50,
+      139,
       [
         {
           "LinearSplit": {
@@ -9047,7 +9164,7 @@
       ]
     ],
     [
-      82,
+      171,
       [
         {
           "TestLessThan": {
@@ -9059,7 +9176,7 @@
       ]
     ],
     [
-      84,
+      173,
       [
         {
           "DivMod": {
@@ -9072,7 +9189,7 @@
       ]
     ],
     [
-      129,
+      218,
       [
         {
           "TestLessThan": {
@@ -9084,7 +9201,7 @@
       ]
     ],
     [
-      131,
+      220,
       [
         {
           "DivMod": {
@@ -9097,7 +9214,7 @@
       ]
     ],
     [
-      246,
+      335,
       [
         {
           "TestLessThan": {
@@ -9109,7 +9226,7 @@
       ]
     ],
     [
-      250,
+      339,
       [
         {
           "LinearSplit": {
@@ -9122,10 +9239,10 @@
         }
       ]
     ],
-    [291, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [340, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [380, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [429, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      370,
+      459,
       [
         {
           "TestLessThanOrEqual": {
@@ -9136,16 +9253,16 @@
         }
       ]
     ],
-    [397, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [419, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [436, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [459, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [475, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [491, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [514, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [530, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [486, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [508, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [525, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [548, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [564, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [580, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [603, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [619, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      547,
+      636,
       [
         {
           "TestLessThanOrEqual": {
@@ -9156,9 +9273,9 @@
         }
       ]
     ],
-    [564, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [653, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      583,
+      672,
       [
         {
           "TestLessThanOrEqual": {
@@ -9169,9 +9286,9 @@
         }
       ]
     ],
-    [607, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
+    [696, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
     [
-      614,
+      703,
       [
         {
           "TestLessThan": {
@@ -9183,7 +9300,7 @@
       ]
     ],
     [
-      616,
+      705,
       [
         {
           "DivMod": {
@@ -9195,9 +9312,9 @@
         }
       ]
     ],
-    [651, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -7 } } } }]],
+    [740, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -7 } } } }]],
     [
-      658,
+      747,
       [
         {
           "TestLessThan": {
@@ -9209,7 +9326,7 @@
       ]
     ],
     [
-      660,
+      749,
       [
         {
           "DivMod": {
@@ -9221,13 +9338,13 @@
         }
       ]
     ],
-    [681, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [697, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [719, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [747, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [762, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [770, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [786, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [808, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [836, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [851, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      777,
+      866,
       [
         {
           "TestLessThanOrEqual": {
@@ -9239,7 +9356,7 @@
       ]
     ],
     [
-      810,
+      899,
       [
         {
           "TestLessThan": {
@@ -9251,7 +9368,7 @@
       ]
     ],
     [
-      814,
+      903,
       [
         {
           "LinearSplit": {
@@ -9265,7 +9382,7 @@
       ]
     ],
     [
-      824,
+      913,
       [
         {
           "LinearSplit": {
@@ -9278,9 +9395,9 @@
         }
       ]
     ],
-    [839, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [928, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      862,
+      951,
       [
         {
           "TestLessThanOrEqual": {
@@ -9292,7 +9409,7 @@
       ]
     ],
     [
-      877,
+      966,
       [
         {
           "TestLessThan": {
@@ -9304,7 +9421,7 @@
       ]
     ],
     [
-      881,
+      970,
       [
         {
           "LinearSplit": {
@@ -9318,7 +9435,7 @@
       ]
     ],
     [
-      892,
+      981,
       [
         {
           "LinearSplit": {
@@ -9331,9 +9448,9 @@
         }
       ]
     ],
-    [918, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
+    [1007, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
     [
-      925,
+      1014,
       [
         {
           "TestLessThan": {
@@ -9345,7 +9462,7 @@
       ]
     ],
     [
-      927,
+      1016,
       [
         {
           "DivMod": {
@@ -9357,9 +9474,9 @@
         }
       ]
     ],
-    [960, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -6 } } } }]],
+    [1049, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -6 } } } }]],
     [
-      967,
+      1056,
       [
         {
           "TestLessThan": {
@@ -9371,7 +9488,7 @@
       ]
     ],
     [
-      969,
+      1058,
       [
         {
           "DivMod": {
@@ -9383,14 +9500,14 @@
         }
       ]
     ],
-    [990, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [1007, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [1033, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [1064, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [1087, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [1102, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [1079, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [1096, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [1122, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [1153, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [1176, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [1191, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      1118,
+      1207,
       [
         {
           "TestLessThanOrEqual": {
@@ -9402,7 +9519,7 @@
       ]
     ],
     [
-      1151,
+      1240,
       [
         {
           "TestLessThan": {
@@ -9414,7 +9531,7 @@
       ]
     ],
     [
-      1155,
+      1244,
       [
         {
           "LinearSplit": {
@@ -9428,7 +9545,7 @@
       ]
     ],
     [
-      1165,
+      1254,
       [
         {
           "LinearSplit": {
@@ -9442,7 +9559,7 @@
       ]
     ],
     [
-      1196,
+      1285,
       [
         {
           "TestLessThan": {
@@ -9454,7 +9571,7 @@
       ]
     ],
     [
-      1200,
+      1289,
       [
         {
           "LinearSplit": {
@@ -9468,7 +9585,7 @@
       ]
     ],
     [
-      1210,
+      1299,
       [
         {
           "LinearSplit": {
@@ -9481,9 +9598,9 @@
         }
       ]
     ],
-    [1225, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [1314, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      1250,
+      1339,
       [
         {
           "TestLessThanOrEqual": {
@@ -9494,13 +9611,13 @@
         }
       ]
     ],
-    [1271, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [1294, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [1317, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [1339, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [1354, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [1360, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [1383, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [1406, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [1428, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [1443, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      1370,
+      1459,
       [
         {
           "TestLessThanOrEqual": {
@@ -9512,7 +9629,7 @@
       ]
     ],
     [
-      1403,
+      1492,
       [
         {
           "TestLessThan": {
@@ -9524,7 +9641,7 @@
       ]
     ],
     [
-      1407,
+      1496,
       [
         {
           "LinearSplit": {
@@ -9538,7 +9655,7 @@
       ]
     ],
     [
-      1417,
+      1506,
       [
         {
           "LinearSplit": {
@@ -9552,7 +9669,7 @@
       ]
     ],
     [
-      1449,
+      1538,
       [
         {
           "TestLessThan": {
@@ -9564,7 +9681,7 @@
       ]
     ],
     [
-      1451,
+      1540,
       [
         {
           "DivMod": {
@@ -9577,7 +9694,7 @@
       ]
     ],
     [
-      1496,
+      1585,
       [
         {
           "TestLessThan": {
@@ -9589,7 +9706,7 @@
       ]
     ],
     [
-      1498,
+      1587,
       [
         {
           "DivMod": {
@@ -9601,9 +9718,9 @@
         }
       ]
     ],
-    [1572, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [1661, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      1597,
+      1686,
       [
         {
           "TestLessThanOrEqual": {
@@ -9614,14 +9731,14 @@
         }
       ]
     ],
-    [1613, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
-    [1630, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [1669, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [1685, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [1707, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [1722, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [1702, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
+    [1719, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [1758, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [1774, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [1796, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [1811, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      1738,
+      1827,
       [
         {
           "TestLessThanOrEqual": {
@@ -9633,93 +9750,13 @@
       ]
     ],
     [
-      1771,
+      1860,
       [
         {
           "TestLessThan": {
             "lhs": { "Deref": { "register": "AP", "offset": -1 } },
             "rhs": { "Immediate": "0x800000000000000000000000000000000000000000000000000000000000000" },
             "dst": { "register": "AP", "offset": 4 }
-          }
-        }
-      ]
-    ],
-    [
-      1775,
-      [
-        {
-          "LinearSplit": {
-            "value": { "Deref": { "register": "AP", "offset": 3 } },
-            "scalar": { "Immediate": "0x110000000000000000" },
-            "max_x": { "Immediate": "0xffffffffffffffffffffffffffffffff" },
-            "x": { "register": "AP", "offset": -2 },
-            "y": { "register": "AP", "offset": -1 }
-          }
-        }
-      ]
-    ],
-    [
-      1785,
-      [
-        {
-          "LinearSplit": {
-            "value": { "Deref": { "register": "AP", "offset": -2 } },
-            "scalar": { "Immediate": "0x8000000000000000000000000000000" },
-            "max_x": { "Immediate": "0xffffffffffffffffffffffffffffffff" },
-            "x": { "register": "AP", "offset": -1 },
-            "y": { "register": "AP", "offset": 0 }
-          }
-        }
-      ]
-    ],
-    [
-      1816,
-      [
-        {
-          "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": -1 } },
-            "rhs": { "Immediate": "0x800000000000000000000000000000000000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": 4 }
-          }
-        }
-      ]
-    ],
-    [
-      1820,
-      [
-        {
-          "LinearSplit": {
-            "value": { "Deref": { "register": "AP", "offset": 3 } },
-            "scalar": { "Immediate": "0x110000000000000000" },
-            "max_x": { "Immediate": "0xffffffffffffffffffffffffffffffff" },
-            "x": { "register": "AP", "offset": -2 },
-            "y": { "register": "AP", "offset": -1 }
-          }
-        }
-      ]
-    ],
-    [
-      1830,
-      [
-        {
-          "LinearSplit": {
-            "value": { "Deref": { "register": "AP", "offset": -2 } },
-            "scalar": { "Immediate": "0x8000000000000000000000000000000" },
-            "max_x": { "Immediate": "0xffffffffffffffffffffffffffffffff" },
-            "x": { "register": "AP", "offset": -1 },
-            "y": { "register": "AP", "offset": 0 }
-          }
-        }
-      ]
-    ],
-    [
-      1862,
-      [
-        {
-          "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": -1 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": 0 }
           }
         }
       ]
@@ -9728,17 +9765,72 @@
       1864,
       [
         {
-          "DivMod": {
-            "lhs": { "Deref": { "register": "AP", "offset": -2 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "quotient": { "register": "AP", "offset": 3 },
-            "remainder": { "register": "AP", "offset": 4 }
+          "LinearSplit": {
+            "value": { "Deref": { "register": "AP", "offset": 3 } },
+            "scalar": { "Immediate": "0x110000000000000000" },
+            "max_x": { "Immediate": "0xffffffffffffffffffffffffffffffff" },
+            "x": { "register": "AP", "offset": -2 },
+            "y": { "register": "AP", "offset": -1 }
+          }
+        }
+      ]
+    ],
+    [
+      1874,
+      [
+        {
+          "LinearSplit": {
+            "value": { "Deref": { "register": "AP", "offset": -2 } },
+            "scalar": { "Immediate": "0x8000000000000000000000000000000" },
+            "max_x": { "Immediate": "0xffffffffffffffffffffffffffffffff" },
+            "x": { "register": "AP", "offset": -1 },
+            "y": { "register": "AP", "offset": 0 }
+          }
+        }
+      ]
+    ],
+    [
+      1905,
+      [
+        {
+          "TestLessThan": {
+            "lhs": { "Deref": { "register": "AP", "offset": -1 } },
+            "rhs": { "Immediate": "0x800000000000000000000000000000000000000000000000000000000000000" },
+            "dst": { "register": "AP", "offset": 4 }
           }
         }
       ]
     ],
     [
       1909,
+      [
+        {
+          "LinearSplit": {
+            "value": { "Deref": { "register": "AP", "offset": 3 } },
+            "scalar": { "Immediate": "0x110000000000000000" },
+            "max_x": { "Immediate": "0xffffffffffffffffffffffffffffffff" },
+            "x": { "register": "AP", "offset": -2 },
+            "y": { "register": "AP", "offset": -1 }
+          }
+        }
+      ]
+    ],
+    [
+      1919,
+      [
+        {
+          "LinearSplit": {
+            "value": { "Deref": { "register": "AP", "offset": -2 } },
+            "scalar": { "Immediate": "0x8000000000000000000000000000000" },
+            "max_x": { "Immediate": "0xffffffffffffffffffffffffffffffff" },
+            "x": { "register": "AP", "offset": -1 },
+            "y": { "register": "AP", "offset": 0 }
+          }
+        }
+      ]
+    ],
+    [
+      1951,
       [
         {
           "TestLessThan": {
@@ -9750,7 +9842,7 @@
       ]
     ],
     [
-      1911,
+      1953,
       [
         {
           "DivMod": {
@@ -9762,9 +9854,34 @@
         }
       ]
     ],
-    [1985, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      2010,
+      1998,
+      [
+        {
+          "TestLessThan": {
+            "lhs": { "Deref": { "register": "AP", "offset": -1 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "dst": { "register": "AP", "offset": 0 }
+          }
+        }
+      ]
+    ],
+    [
+      2000,
+      [
+        {
+          "DivMod": {
+            "lhs": { "Deref": { "register": "AP", "offset": -2 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "quotient": { "register": "AP", "offset": 3 },
+            "remainder": { "register": "AP", "offset": 4 }
+          }
+        }
+      ]
+    ],
+    [2074, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [
+      2099,
       [
         {
           "TestLessThanOrEqual": {
@@ -9775,15 +9892,15 @@
         }
       ]
     ],
-    [2026, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
-    [2055, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [2102, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [2118, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [2140, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [2162, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [2177, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2115, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
+    [2144, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2191, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2207, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2229, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2251, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2266, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      2193,
+      2282,
       [
         {
           "TestLessThanOrEqual": {
@@ -9795,7 +9912,7 @@
       ]
     ],
     [
-      2226,
+      2315,
       [
         {
           "TestLessThan": {
@@ -9807,7 +9924,7 @@
       ]
     ],
     [
-      2230,
+      2319,
       [
         {
           "LinearSplit": {
@@ -9821,7 +9938,7 @@
       ]
     ],
     [
-      2240,
+      2329,
       [
         {
           "LinearSplit": {
@@ -9835,7 +9952,7 @@
       ]
     ],
     [
-      2272,
+      2361,
       [
         {
           "TestLessThan": {
@@ -9847,7 +9964,7 @@
       ]
     ],
     [
-      2274,
+      2363,
       [
         {
           "DivMod": {
@@ -9860,7 +9977,7 @@
       ]
     ],
     [
-      2319,
+      2408,
       [
         {
           "TestLessThan": {
@@ -9872,7 +9989,7 @@
       ]
     ],
     [
-      2321,
+      2410,
       [
         {
           "DivMod": {
@@ -9884,9 +10001,9 @@
         }
       ]
     ],
-    [2395, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2484, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      2420,
+      2509,
       [
         {
           "TestLessThanOrEqual": {
@@ -9897,14 +10014,14 @@
         }
       ]
     ],
-    [2436, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
-    [2453, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [2492, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [2508, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [2530, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [2545, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2525, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
+    [2542, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2581, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2597, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2619, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2634, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      2563,
+      2652,
       [
         {
           "TestLessThanOrEqual": {
@@ -9915,9 +10032,9 @@
         }
       ]
     ],
-    [2580, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2669, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      2603,
+      2692,
       [
         {
           "TestLessThanOrEqual": {
@@ -9928,11 +10045,11 @@
         }
       ]
     ],
-    [2630, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [2685, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [2701, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2719, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2774, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2790, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      2719,
+      2808,
       [
         {
           "TestLessThanOrEqual": {
@@ -9943,9 +10060,9 @@
         }
       ]
     ],
-    [2736, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2825, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      2759,
+      2848,
       [
         {
           "TestLessThanOrEqual": {
@@ -9956,11 +10073,11 @@
         }
       ]
     ],
-    [2786, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [2841, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [2857, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2875, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2930, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2946, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      2873,
+      2962,
       [
         {
           "TestLessThanOrEqual": {
@@ -9971,9 +10088,9 @@
         }
       ]
     ],
-    [2890, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [2979, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      2909,
+      2998,
       [
         {
           "TestLessThanOrEqual": {
@@ -9984,11 +10101,11 @@
         }
       ]
     ],
-    [2921, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [2936, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [2951, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [3010, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [3025, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [3040, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      2966,
+      3055,
       [
         {
           "TestLessThanOrEqual": {
@@ -9999,9 +10116,9 @@
         }
       ]
     ],
-    [2983, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [3072, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      3002,
+      3091,
       [
         {
           "TestLessThanOrEqual": {
@@ -10012,9 +10129,9 @@
         }
       ]
     ],
-    [3026, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
+    [3115, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
     [
-      3033,
+      3122,
       [
         {
           "TestLessThan": {
@@ -10026,7 +10143,7 @@
       ]
     ],
     [
-      3035,
+      3124,
       [
         {
           "DivMod": {
@@ -10038,9 +10155,9 @@
         }
       ]
     ],
-    [3070, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -7 } } } }]],
+    [3159, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -7 } } } }]],
     [
-      3077,
+      3166,
       [
         {
           "TestLessThan": {
@@ -10052,7 +10169,7 @@
       ]
     ],
     [
-      3079,
+      3168,
       [
         {
           "DivMod": {
@@ -10064,13 +10181,13 @@
         }
       ]
     ],
-    [3100, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [3116, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [3138, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [3166, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [3181, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [3189, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [3205, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [3227, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [3255, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [3270, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      3196,
+      3285,
       [
         {
           "TestLessThanOrEqual": {
@@ -10082,7 +10199,7 @@
       ]
     ],
     [
-      3229,
+      3318,
       [
         {
           "TestLessThan": {
@@ -10094,7 +10211,7 @@
       ]
     ],
     [
-      3233,
+      3322,
       [
         {
           "LinearSplit": {
@@ -10108,7 +10225,7 @@
       ]
     ],
     [
-      3243,
+      3332,
       [
         {
           "LinearSplit": {
@@ -10121,9 +10238,9 @@
         }
       ]
     ],
-    [3258, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [3347, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      3281,
+      3370,
       [
         {
           "TestLessThanOrEqual": {
@@ -10135,7 +10252,7 @@
       ]
     ],
     [
-      3296,
+      3385,
       [
         {
           "TestLessThan": {
@@ -10147,7 +10264,7 @@
       ]
     ],
     [
-      3300,
+      3389,
       [
         {
           "LinearSplit": {
@@ -10161,7 +10278,7 @@
       ]
     ],
     [
-      3311,
+      3400,
       [
         {
           "LinearSplit": {
@@ -10174,9 +10291,9 @@
         }
       ]
     ],
-    [3337, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
+    [3426, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
     [
-      3344,
+      3433,
       [
         {
           "TestLessThan": {
@@ -10188,7 +10305,7 @@
       ]
     ],
     [
-      3346,
+      3435,
       [
         {
           "DivMod": {
@@ -10200,9 +10317,9 @@
         }
       ]
     ],
-    [3379, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -6 } } } }]],
+    [3468, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -6 } } } }]],
     [
-      3386,
+      3475,
       [
         {
           "TestLessThan": {
@@ -10214,7 +10331,7 @@
       ]
     ],
     [
-      3388,
+      3477,
       [
         {
           "DivMod": {
@@ -10226,14 +10343,14 @@
         }
       ]
     ],
-    [3409, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [3426, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [3452, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [3483, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [3506, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [3521, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [3498, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [3515, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [3541, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [3572, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [3595, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [3610, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      3537,
+      3626,
       [
         {
           "TestLessThanOrEqual": {
@@ -10245,93 +10362,13 @@
       ]
     ],
     [
-      3570,
+      3659,
       [
         {
           "TestLessThan": {
             "lhs": { "Deref": { "register": "AP", "offset": -1 } },
             "rhs": { "Immediate": "0x800000000000000000000000000000000000000000000000000000000000000" },
             "dst": { "register": "AP", "offset": 4 }
-          }
-        }
-      ]
-    ],
-    [
-      3574,
-      [
-        {
-          "LinearSplit": {
-            "value": { "Deref": { "register": "AP", "offset": 3 } },
-            "scalar": { "Immediate": "0x110000000000000000" },
-            "max_x": { "Immediate": "0xffffffffffffffffffffffffffffffff" },
-            "x": { "register": "AP", "offset": -2 },
-            "y": { "register": "AP", "offset": -1 }
-          }
-        }
-      ]
-    ],
-    [
-      3584,
-      [
-        {
-          "LinearSplit": {
-            "value": { "Deref": { "register": "AP", "offset": -2 } },
-            "scalar": { "Immediate": "0x8000000000000000000000000000000" },
-            "max_x": { "Immediate": "0xffffffffffffffffffffffffffffffff" },
-            "x": { "register": "AP", "offset": -1 },
-            "y": { "register": "AP", "offset": 0 }
-          }
-        }
-      ]
-    ],
-    [
-      3615,
-      [
-        {
-          "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": -1 } },
-            "rhs": { "Immediate": "0x800000000000000000000000000000000000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": 4 }
-          }
-        }
-      ]
-    ],
-    [
-      3619,
-      [
-        {
-          "LinearSplit": {
-            "value": { "Deref": { "register": "AP", "offset": 3 } },
-            "scalar": { "Immediate": "0x110000000000000000" },
-            "max_x": { "Immediate": "0xffffffffffffffffffffffffffffffff" },
-            "x": { "register": "AP", "offset": -2 },
-            "y": { "register": "AP", "offset": -1 }
-          }
-        }
-      ]
-    ],
-    [
-      3629,
-      [
-        {
-          "LinearSplit": {
-            "value": { "Deref": { "register": "AP", "offset": -2 } },
-            "scalar": { "Immediate": "0x8000000000000000000000000000000" },
-            "max_x": { "Immediate": "0xffffffffffffffffffffffffffffffff" },
-            "x": { "register": "AP", "offset": -1 },
-            "y": { "register": "AP", "offset": 0 }
-          }
-        }
-      ]
-    ],
-    [
-      3661,
-      [
-        {
-          "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": -1 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": 0 }
           }
         }
       ]
@@ -10340,17 +10377,72 @@
       3663,
       [
         {
-          "DivMod": {
-            "lhs": { "Deref": { "register": "AP", "offset": -2 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "quotient": { "register": "AP", "offset": 3 },
-            "remainder": { "register": "AP", "offset": 4 }
+          "LinearSplit": {
+            "value": { "Deref": { "register": "AP", "offset": 3 } },
+            "scalar": { "Immediate": "0x110000000000000000" },
+            "max_x": { "Immediate": "0xffffffffffffffffffffffffffffffff" },
+            "x": { "register": "AP", "offset": -2 },
+            "y": { "register": "AP", "offset": -1 }
+          }
+        }
+      ]
+    ],
+    [
+      3673,
+      [
+        {
+          "LinearSplit": {
+            "value": { "Deref": { "register": "AP", "offset": -2 } },
+            "scalar": { "Immediate": "0x8000000000000000000000000000000" },
+            "max_x": { "Immediate": "0xffffffffffffffffffffffffffffffff" },
+            "x": { "register": "AP", "offset": -1 },
+            "y": { "register": "AP", "offset": 0 }
+          }
+        }
+      ]
+    ],
+    [
+      3704,
+      [
+        {
+          "TestLessThan": {
+            "lhs": { "Deref": { "register": "AP", "offset": -1 } },
+            "rhs": { "Immediate": "0x800000000000000000000000000000000000000000000000000000000000000" },
+            "dst": { "register": "AP", "offset": 4 }
           }
         }
       ]
     ],
     [
       3708,
+      [
+        {
+          "LinearSplit": {
+            "value": { "Deref": { "register": "AP", "offset": 3 } },
+            "scalar": { "Immediate": "0x110000000000000000" },
+            "max_x": { "Immediate": "0xffffffffffffffffffffffffffffffff" },
+            "x": { "register": "AP", "offset": -2 },
+            "y": { "register": "AP", "offset": -1 }
+          }
+        }
+      ]
+    ],
+    [
+      3718,
+      [
+        {
+          "LinearSplit": {
+            "value": { "Deref": { "register": "AP", "offset": -2 } },
+            "scalar": { "Immediate": "0x8000000000000000000000000000000" },
+            "max_x": { "Immediate": "0xffffffffffffffffffffffffffffffff" },
+            "x": { "register": "AP", "offset": -1 },
+            "y": { "register": "AP", "offset": 0 }
+          }
+        }
+      ]
+    ],
+    [
+      3750,
       [
         {
           "TestLessThan": {
@@ -10362,7 +10454,7 @@
       ]
     ],
     [
-      3710,
+      3752,
       [
         {
           "DivMod": {
@@ -10374,9 +10466,34 @@
         }
       ]
     ],
-    [3784, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      3809,
+      3797,
+      [
+        {
+          "TestLessThan": {
+            "lhs": { "Deref": { "register": "AP", "offset": -1 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "dst": { "register": "AP", "offset": 0 }
+          }
+        }
+      ]
+    ],
+    [
+      3799,
+      [
+        {
+          "DivMod": {
+            "lhs": { "Deref": { "register": "AP", "offset": -2 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "quotient": { "register": "AP", "offset": 3 },
+            "remainder": { "register": "AP", "offset": 4 }
+          }
+        }
+      ]
+    ],
+    [3873, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [
+      3898,
       [
         {
           "TestLessThanOrEqual": {
@@ -10387,15 +10504,15 @@
         }
       ]
     ],
-    [3825, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
-    [3854, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [3901, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [3917, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [3939, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [3961, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [3976, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [3914, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
+    [3943, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [3990, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [4006, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [4028, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [4050, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [4065, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      3992,
+      4081,
       [
         {
           "TestLessThanOrEqual": {
@@ -10407,7 +10524,7 @@
       ]
     ],
     [
-      4025,
+      4114,
       [
         {
           "TestLessThan": {
@@ -10419,7 +10536,7 @@
       ]
     ],
     [
-      4029,
+      4118,
       [
         {
           "LinearSplit": {
@@ -10433,7 +10550,7 @@
       ]
     ],
     [
-      4039,
+      4128,
       [
         {
           "LinearSplit": {
@@ -10446,9 +10563,9 @@
         }
       ]
     ],
-    [4054, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [4143, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      4077,
+      4166,
       [
         {
           "TestLessThanOrEqual": {
@@ -10460,7 +10577,7 @@
       ]
     ],
     [
-      4092,
+      4181,
       [
         {
           "TestLessThan": {
@@ -10472,7 +10589,7 @@
       ]
     ],
     [
-      4096,
+      4185,
       [
         {
           "LinearSplit": {
@@ -10486,7 +10603,7 @@
       ]
     ],
     [
-      4107,
+      4196,
       [
         {
           "LinearSplit": {
@@ -10499,13 +10616,13 @@
         }
       ]
     ],
-    [4133, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
-    [4136, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [4161, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [4184, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [4199, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [4222, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
+    [4225, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [4250, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [4273, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [4288, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      4215,
+      4304,
       [
         {
           "TestLessThanOrEqual": {
@@ -10517,7 +10634,7 @@
       ]
     ],
     [
-      4249,
+      4338,
       [
         {
           "TestLessThan": {
@@ -10529,7 +10646,7 @@
       ]
     ],
     [
-      4251,
+      4340,
       [
         {
           "DivMod": {
@@ -10542,7 +10659,7 @@
       ]
     ],
     [
-      4296,
+      4385,
       [
         {
           "TestLessThan": {
@@ -10554,7 +10671,7 @@
       ]
     ],
     [
-      4298,
+      4387,
       [
         {
           "DivMod": {
@@ -10567,7 +10684,7 @@
       ]
     ],
     [
-      4388,
+      4477,
       [
         {
           "TestLessThan": {
@@ -10579,7 +10696,7 @@
       ]
     ],
     [
-      4392,
+      4481,
       [
         {
           "LinearSplit": {
@@ -10593,7 +10710,7 @@
       ]
     ],
     [
-      4402,
+      4491,
       [
         {
           "LinearSplit": {
@@ -10606,9 +10723,9 @@
         }
       ]
     ],
-    [4417, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [4506, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      4447,
+      4536,
       [
         {
           "TestLessThanOrEqual": {
@@ -10619,13 +10736,13 @@
         }
       ]
     ],
-    [4470, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [4492, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [4516, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [4532, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [4548, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [4559, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [4581, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [4605, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [4621, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [4637, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      4565,
+      4654,
       [
         {
           "TestLessThanOrEqual": {
@@ -10636,10 +10753,10 @@
         }
       ]
     ],
-    [4637, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [4663, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -10 } } } }]],
+    [4726, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [4752, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -10 } } } }]],
     [
-      4673,
+      4762,
       [
         {
           "TestLessThan": {
@@ -10650,11 +10767,11 @@
         }
       ]
     ],
-    [4687, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -5 } } } }]],
-    [4776, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [4833, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [4776, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -5 } } } }]],
+    [4865, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [4922, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      4869,
+      4958,
       [
         {
           "TestLessThan": {
@@ -10666,7 +10783,7 @@
       ]
     ],
     [
-      4873,
+      4962,
       [
         {
           "LinearSplit": {
@@ -10680,7 +10797,7 @@
       ]
     ],
     [
-      4884,
+      4973,
       [
         {
           "LinearSplit": {
@@ -10693,9 +10810,9 @@
         }
       ]
     ],
-    [4910, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
+    [4999, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
     [
-      4917,
+      5006,
       [
         {
           "TestLessThan": {
@@ -10707,7 +10824,7 @@
       ]
     ],
     [
-      4919,
+      5008,
       [
         {
           "DivMod": {
@@ -10719,9 +10836,9 @@
         }
       ]
     ],
-    [4952, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -6 } } } }]],
+    [5041, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -6 } } } }]],
     [
-      4959,
+      5048,
       [
         {
           "TestLessThan": {
@@ -10733,7 +10850,7 @@
       ]
     ],
     [
-      4961,
+      5050,
       [
         {
           "DivMod": {
@@ -10745,12 +10862,12 @@
         }
       ]
     ],
-    [4994, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [5020, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [5062, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [5081, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [5083, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [5109, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [5151, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [5170, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      5101,
+      5190,
       [
         {
           "TestLessThan": {
@@ -10762,7 +10879,7 @@
       ]
     ],
     [
-      5105,
+      5194,
       [
         {
           "LinearSplit": {
@@ -10776,7 +10893,7 @@
       ]
     ],
     [
-      5116,
+      5205,
       [
         {
           "LinearSplit": {
@@ -10789,84 +10906,60 @@
         }
       ]
     ],
-    [5142, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -7 } } } }]],
-    [
-      5149,
-      [
-        {
-          "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": -3 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": 0 }
-          }
-        }
-      ]
-    ],
-    [
-      5151,
-      [
-        {
-          "DivMod": {
-            "lhs": { "Deref": { "register": "AP", "offset": -4 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "quotient": { "register": "AP", "offset": 3 },
-            "remainder": { "register": "AP", "offset": 4 }
-          }
-        }
-      ]
-    ],
-    [5184, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -6 } } } }]],
-    [
-      5191,
-      [
-        {
-          "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": -3 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": 0 }
-          }
-        }
-      ]
-    ],
-    [
-      5193,
-      [
-        {
-          "DivMod": {
-            "lhs": { "Deref": { "register": "AP", "offset": -4 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "quotient": { "register": "AP", "offset": 3 },
-            "remainder": { "register": "AP", "offset": 4 }
-          }
-        }
-      ]
-    ],
-    [
-      5215,
-      [
-        {
-          "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": 0 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": -1 }
-          }
-        }
-      ]
-    ],
+    [5231, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -7 } } } }]],
     [
       5238,
       [
         {
           "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": 0 } },
+            "lhs": { "Deref": { "register": "AP", "offset": -3 } },
             "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": -1 }
+            "dst": { "register": "AP", "offset": 0 }
           }
         }
       ]
     ],
     [
-      5258,
+      5240,
+      [
+        {
+          "DivMod": {
+            "lhs": { "Deref": { "register": "AP", "offset": -4 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "quotient": { "register": "AP", "offset": 3 },
+            "remainder": { "register": "AP", "offset": 4 }
+          }
+        }
+      ]
+    ],
+    [5273, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -6 } } } }]],
+    [
+      5280,
+      [
+        {
+          "TestLessThan": {
+            "lhs": { "Deref": { "register": "AP", "offset": -3 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "dst": { "register": "AP", "offset": 0 }
+          }
+        }
+      ]
+    ],
+    [
+      5282,
+      [
+        {
+          "DivMod": {
+            "lhs": { "Deref": { "register": "AP", "offset": -4 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "quotient": { "register": "AP", "offset": 3 },
+            "remainder": { "register": "AP", "offset": 4 }
+          }
+        }
+      ]
+    ],
+    [
+      5304,
       [
         {
           "TestLessThan": {
@@ -10878,7 +10971,31 @@
       ]
     ],
     [
-      5288,
+      5327,
+      [
+        {
+          "TestLessThan": {
+            "lhs": { "Deref": { "register": "AP", "offset": 0 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "dst": { "register": "AP", "offset": -1 }
+          }
+        }
+      ]
+    ],
+    [
+      5347,
+      [
+        {
+          "TestLessThan": {
+            "lhs": { "Deref": { "register": "AP", "offset": 0 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "dst": { "register": "AP", "offset": -1 }
+          }
+        }
+      ]
+    ],
+    [
+      5377,
       [
         {
           "TestLessThan": {
@@ -10890,7 +11007,7 @@
       ]
     ],
     [
-      5292,
+      5381,
       [
         {
           "LinearSplit": {
@@ -10904,7 +11021,7 @@
       ]
     ],
     [
-      5303,
+      5392,
       [
         {
           "LinearSplit": {
@@ -10917,9 +11034,9 @@
         }
       ]
     ],
-    [5330, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -32 } } } }]],
+    [5419, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -32 } } } }]],
     [
-      5345,
+      5434,
       [
         {
           "SystemCall": {
@@ -10931,7 +11048,7 @@
       ]
     ],
     [
-      5353,
+      5442,
       [
         {
           "TestLessThan": {
@@ -10943,7 +11060,7 @@
       ]
     ],
     [
-      5357,
+      5446,
       [
         {
           "LinearSplit": {
@@ -10957,7 +11074,7 @@
       ]
     ],
     [
-      5368,
+      5457,
       [
         {
           "LinearSplit": {
@@ -10971,7 +11088,7 @@
       ]
     ],
     [
-      5395,
+      5484,
       [
         {
           "SystemCall": {
@@ -10983,82 +11100,58 @@
       ]
     ],
     [
-      5402,
-      [
-        {
-          "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": -3 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": 0 }
-          }
-        }
-      ]
-    ],
-    [
-      5404,
-      [
-        {
-          "DivMod": {
-            "lhs": { "Deref": { "register": "AP", "offset": -4 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "quotient": { "register": "AP", "offset": 3 },
-            "remainder": { "register": "AP", "offset": 4 }
-          }
-        }
-      ]
-    ],
-    [5437, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -6 } } } }]],
-    [
-      5444,
-      [
-        {
-          "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": -3 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": 0 }
-          }
-        }
-      ]
-    ],
-    [
-      5446,
-      [
-        {
-          "DivMod": {
-            "lhs": { "Deref": { "register": "AP", "offset": -4 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "quotient": { "register": "AP", "offset": 3 },
-            "remainder": { "register": "AP", "offset": 4 }
-          }
-        }
-      ]
-    ],
-    [
-      5468,
-      [
-        {
-          "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": 0 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": -1 }
-          }
-        }
-      ]
-    ],
-    [
       5491,
       [
         {
           "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": 0 } },
+            "lhs": { "Deref": { "register": "AP", "offset": -3 } },
             "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": -1 }
+            "dst": { "register": "AP", "offset": 0 }
           }
         }
       ]
     ],
     [
-      5511,
+      5493,
+      [
+        {
+          "DivMod": {
+            "lhs": { "Deref": { "register": "AP", "offset": -4 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "quotient": { "register": "AP", "offset": 3 },
+            "remainder": { "register": "AP", "offset": 4 }
+          }
+        }
+      ]
+    ],
+    [5526, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -6 } } } }]],
+    [
+      5533,
+      [
+        {
+          "TestLessThan": {
+            "lhs": { "Deref": { "register": "AP", "offset": -3 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "dst": { "register": "AP", "offset": 0 }
+          }
+        }
+      ]
+    ],
+    [
+      5535,
+      [
+        {
+          "DivMod": {
+            "lhs": { "Deref": { "register": "AP", "offset": -4 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "quotient": { "register": "AP", "offset": 3 },
+            "remainder": { "register": "AP", "offset": 4 }
+          }
+        }
+      ]
+    ],
+    [
+      5557,
       [
         {
           "TestLessThan": {
@@ -11070,7 +11163,31 @@
       ]
     ],
     [
-      5541,
+      5580,
+      [
+        {
+          "TestLessThan": {
+            "lhs": { "Deref": { "register": "AP", "offset": 0 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "dst": { "register": "AP", "offset": -1 }
+          }
+        }
+      ]
+    ],
+    [
+      5600,
+      [
+        {
+          "TestLessThan": {
+            "lhs": { "Deref": { "register": "AP", "offset": 0 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "dst": { "register": "AP", "offset": -1 }
+          }
+        }
+      ]
+    ],
+    [
+      5630,
       [
         {
           "TestLessThan": {
@@ -11082,7 +11199,7 @@
       ]
     ],
     [
-      5545,
+      5634,
       [
         {
           "LinearSplit": {
@@ -11096,7 +11213,7 @@
       ]
     ],
     [
-      5556,
+      5645,
       [
         {
           "LinearSplit": {
@@ -11109,9 +11226,9 @@
         }
       ]
     ],
-    [5583, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -32 } } } }]],
+    [5672, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -32 } } } }]],
     [
-      5598,
+      5687,
       [
         {
           "SystemCall": {
@@ -11122,17 +11239,17 @@
         }
       ]
     ],
-    [5601, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [5603, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [5637, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -18 } } } }]],
-    [5689, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [5706, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [5732, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [5790, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [5807, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [5833, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [5690, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [5692, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [5726, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -18 } } } }]],
+    [5778, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [5795, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [5821, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [5879, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [5896, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [5922, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      5893,
+      5982,
       [
         {
           "TestLessThan": {
@@ -11144,7 +11261,7 @@
       ]
     ],
     [
-      5916,
+      6005,
       [
         {
           "TestLessThan": {
@@ -11156,7 +11273,7 @@
       ]
     ],
     [
-      5936,
+      6025,
       [
         {
           "TestLessThan": {
@@ -11167,11 +11284,11 @@
         }
       ]
     ],
-    [5974, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [6017, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [6036, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [6063, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [6106, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [6125, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      6059,
+      6148,
       [
         {
           "TestLessThan": {
@@ -11183,7 +11300,7 @@
       ]
     ],
     [
-      6063,
+      6152,
       [
         {
           "LinearSplit": {
@@ -11197,7 +11314,7 @@
       ]
     ],
     [
-      6074,
+      6163,
       [
         {
           "LinearSplit": {
@@ -11210,9 +11327,9 @@
         }
       ]
     ],
-    [6101, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -7 } } } }]],
+    [6190, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -7 } } } }]],
     [
-      6116,
+      6205,
       [
         {
           "SystemCall": {
@@ -11221,12 +11338,12 @@
         }
       ]
     ],
-    [6119, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [6121, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [6155, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -18 } } } }]],
-    [6213, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
+    [6208, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [6210, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [6244, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -18 } } } }]],
+    [6302, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
     [
-      6220,
+      6309,
       [
         {
           "TestLessThan": {
@@ -11238,7 +11355,7 @@
       ]
     ],
     [
-      6224,
+      6313,
       [
         {
           "LinearSplit": {
@@ -11251,9 +11368,9 @@
         }
       ]
     ],
-    [6248, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [6337, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      6269,
+      6358,
       [
         {
           "DivMod": {
@@ -11266,7 +11383,7 @@
       ]
     ],
     [
-      6285,
+      6374,
       [
         {
           "TestLessThan": {
@@ -11278,7 +11395,7 @@
       ]
     ],
     [
-      6289,
+      6378,
       [
         {
           "LinearSplit": {
@@ -11292,7 +11409,7 @@
       ]
     ],
     [
-      6300,
+      6389,
       [
         {
           "LinearSplit": {
@@ -11305,11 +11422,11 @@
         }
       ]
     ],
-    [6314, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [6352, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -14 } } } }]],
-    [6429, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [6403, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [6441, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -14 } } } }]],
+    [6518, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      6467,
+      6556,
       [
         {
           "TestLessThanOrEqual": {
@@ -11320,11 +11437,11 @@
         }
       ]
     ],
-    [6519, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [6535, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [6537, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [6608, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [6624, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [6626, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      6655,
+      6744,
       [
         {
           "TestLessThan": {
@@ -11336,7 +11453,7 @@
       ]
     ],
     [
-      6659,
+      6748,
       [
         {
           "LinearSplit": {
@@ -11350,7 +11467,7 @@
       ]
     ],
     [
-      6670,
+      6759,
       [
         {
           "LinearSplit": {
@@ -11363,9 +11480,9 @@
         }
       ]
     ],
-    [6696, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
+    [6785, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -5 } } } }]],
     [
-      6704,
+      6793,
       [
         {
           "TestLessThan": {
@@ -11377,7 +11494,7 @@
       ]
     ],
     [
-      6708,
+      6797,
       [
         {
           "LinearSplit": {
@@ -11391,7 +11508,7 @@
       ]
     ],
     [
-      6719,
+      6808,
       [
         {
           "LinearSplit": {
@@ -11405,7 +11522,7 @@
       ]
     ],
     [
-      6750,
+      6839,
       [
         {
           "SystemCall": {
@@ -11414,12 +11531,12 @@
         }
       ]
     ],
-    [6773, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [6819, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -9 } } } }]],
-    [6995, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [7021, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -7 } } } }]],
+    [6862, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [6908, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -9 } } } }]],
+    [7084, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [7110, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -7 } } } }]],
     [
-      7042,
+      7131,
       [
         {
           "TestLessThan": {
@@ -11430,11 +11547,11 @@
         }
       ]
     ],
-    [7070, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -13 } } } }]],
-    [7093, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [7128, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [7159, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -13 } } } }]],
+    [7182, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [7217, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      7189,
+      7278,
       [
         {
           "TestLessThanOrEqual": {
@@ -11445,9 +11562,9 @@
         }
       ]
     ],
-    [7214, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -11 } } } }]],
+    [7303, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -11 } } } }]],
     [
-      7221,
+      7310,
       [
         {
           "TestLessThan": {
@@ -11459,7 +11576,7 @@
       ]
     ],
     [
-      7225,
+      7314,
       [
         {
           "LinearSplit": {
@@ -11473,7 +11590,7 @@
       ]
     ],
     [
-      7235,
+      7324,
       [
         {
           "LinearSplit": {
@@ -11487,7 +11604,7 @@
       ]
     ],
     [
-      7250,
+      7339,
       [
         {
           "TestLessThan": {
@@ -11499,7 +11616,7 @@
       ]
     ],
     [
-      7260,
+      7349,
       [
         {
           "TestLessThan": {
@@ -11517,7 +11634,7 @@
       ]
     ],
     [
-      7290,
+      7379,
       [
         {
           "TestLessThan": {
@@ -11529,7 +11646,7 @@
       ]
     ],
     [
-      7294,
+      7383,
       [
         {
           "LinearSplit": {
@@ -11543,7 +11660,7 @@
       ]
     ],
     [
-      7305,
+      7394,
       [
         {
           "LinearSplit": {
@@ -11556,11 +11673,11 @@
         }
       ]
     ],
-    [7342, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [7372, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [7433, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [7431, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [7461, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [7522, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      7466,
+      7555,
       [
         {
           "TestLessThan": {
@@ -11572,7 +11689,7 @@
       ]
     ],
     [
-      7476,
+      7565,
       [
         {
           "TestLessThan": {
@@ -11589,9 +11706,9 @@
         }
       ]
     ],
-    [7497, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -9 } } } }]],
+    [7586, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -9 } } } }]],
     [
-      7508,
+      7597,
       [
         {
           "TestLessThan": {
@@ -11603,7 +11720,7 @@
       ]
     ],
     [
-      7512,
+      7601,
       [
         {
           "LinearSplit": {
@@ -11617,7 +11734,7 @@
       ]
     ],
     [
-      7523,
+      7612,
       [
         {
           "LinearSplit": {
@@ -11630,70 +11747,19 @@
         }
       ]
     ],
-    [7573, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -13 } } } }]],
-    [7644, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [7656, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [7681, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [7706, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -6 } } } }]],
+    [7662, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -13 } } } }]],
+    [7733, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [7745, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [7770, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [7795, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -6 } } } }]],
     [
-      7713,
+      7802,
       [
         {
           "TestLessThan": {
             "lhs": { "Deref": { "register": "AP", "offset": -3 } },
             "rhs": { "Immediate": "0x100000000000000000000000000000000" },
             "dst": { "register": "AP", "offset": 0 }
-          }
-        }
-      ]
-    ],
-    [
-      7715,
-      [
-        {
-          "DivMod": {
-            "lhs": { "Deref": { "register": "AP", "offset": -4 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "quotient": { "register": "AP", "offset": 3 },
-            "remainder": { "register": "AP", "offset": 4 }
-          }
-        }
-      ]
-    ],
-    [7750, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -7 } } } }]],
-    [
-      7757,
-      [
-        {
-          "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": -3 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": 0 }
-          }
-        }
-      ]
-    ],
-    [
-      7759,
-      [
-        {
-          "DivMod": {
-            "lhs": { "Deref": { "register": "AP", "offset": -4 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "quotient": { "register": "AP", "offset": 3 },
-            "remainder": { "register": "AP", "offset": 4 }
-          }
-        }
-      ]
-    ],
-    [
-      7781,
-      [
-        {
-          "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": 0 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": -1 }
           }
         }
       ]
@@ -11702,16 +11768,43 @@
       7804,
       [
         {
-          "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": 0 } },
+          "DivMod": {
+            "lhs": { "Deref": { "register": "AP", "offset": -4 } },
             "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": -1 }
+            "quotient": { "register": "AP", "offset": 3 },
+            "remainder": { "register": "AP", "offset": 4 }
+          }
+        }
+      ]
+    ],
+    [7839, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -7 } } } }]],
+    [
+      7846,
+      [
+        {
+          "TestLessThan": {
+            "lhs": { "Deref": { "register": "AP", "offset": -3 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "dst": { "register": "AP", "offset": 0 }
           }
         }
       ]
     ],
     [
-      7824,
+      7848,
+      [
+        {
+          "DivMod": {
+            "lhs": { "Deref": { "register": "AP", "offset": -4 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "quotient": { "register": "AP", "offset": 3 },
+            "remainder": { "register": "AP", "offset": 4 }
+          }
+        }
+      ]
+    ],
+    [
+      7870,
       [
         {
           "TestLessThan": {
@@ -11722,9 +11815,33 @@
         }
       ]
     ],
-    [7860, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -22 } } } }]],
     [
-      7877,
+      7893,
+      [
+        {
+          "TestLessThan": {
+            "lhs": { "Deref": { "register": "AP", "offset": 0 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "dst": { "register": "AP", "offset": -1 }
+          }
+        }
+      ]
+    ],
+    [
+      7913,
+      [
+        {
+          "TestLessThan": {
+            "lhs": { "Deref": { "register": "AP", "offset": 0 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "dst": { "register": "AP", "offset": -1 }
+          }
+        }
+      ]
+    ],
+    [7949, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -22 } } } }]],
+    [
+      7966,
       [
         {
           "SystemCall": {
@@ -11736,7 +11853,7 @@
       ]
     ],
     [
-      7885,
+      7974,
       [
         {
           "TestLessThan": {
@@ -11748,7 +11865,7 @@
       ]
     ],
     [
-      7889,
+      7978,
       [
         {
           "LinearSplit": {
@@ -11762,7 +11879,7 @@
       ]
     ],
     [
-      7900,
+      7989,
       [
         {
           "LinearSplit": {
@@ -11776,7 +11893,7 @@
       ]
     ],
     [
-      7927,
+      8016,
       [
         {
           "SystemCall": {
@@ -11788,82 +11905,58 @@
       ]
     ],
     [
-      7934,
-      [
-        {
-          "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": -3 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": 0 }
-          }
-        }
-      ]
-    ],
-    [
-      7936,
-      [
-        {
-          "DivMod": {
-            "lhs": { "Deref": { "register": "AP", "offset": -4 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "quotient": { "register": "AP", "offset": 3 },
-            "remainder": { "register": "AP", "offset": 4 }
-          }
-        }
-      ]
-    ],
-    [7969, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -6 } } } }]],
-    [
-      7976,
-      [
-        {
-          "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": -3 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": 0 }
-          }
-        }
-      ]
-    ],
-    [
-      7978,
-      [
-        {
-          "DivMod": {
-            "lhs": { "Deref": { "register": "AP", "offset": -4 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "quotient": { "register": "AP", "offset": 3 },
-            "remainder": { "register": "AP", "offset": 4 }
-          }
-        }
-      ]
-    ],
-    [
-      8000,
-      [
-        {
-          "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": 0 } },
-            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": -1 }
-          }
-        }
-      ]
-    ],
-    [
       8023,
       [
         {
           "TestLessThan": {
-            "lhs": { "Deref": { "register": "AP", "offset": 0 } },
+            "lhs": { "Deref": { "register": "AP", "offset": -3 } },
             "rhs": { "Immediate": "0x100000000000000000000000000000000" },
-            "dst": { "register": "AP", "offset": -1 }
+            "dst": { "register": "AP", "offset": 0 }
           }
         }
       ]
     ],
     [
-      8043,
+      8025,
+      [
+        {
+          "DivMod": {
+            "lhs": { "Deref": { "register": "AP", "offset": -4 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "quotient": { "register": "AP", "offset": 3 },
+            "remainder": { "register": "AP", "offset": 4 }
+          }
+        }
+      ]
+    ],
+    [8058, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -6 } } } }]],
+    [
+      8065,
+      [
+        {
+          "TestLessThan": {
+            "lhs": { "Deref": { "register": "AP", "offset": -3 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "dst": { "register": "AP", "offset": 0 }
+          }
+        }
+      ]
+    ],
+    [
+      8067,
+      [
+        {
+          "DivMod": {
+            "lhs": { "Deref": { "register": "AP", "offset": -4 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "quotient": { "register": "AP", "offset": 3 },
+            "remainder": { "register": "AP", "offset": 4 }
+          }
+        }
+      ]
+    ],
+    [
+      8089,
       [
         {
           "TestLessThan": {
@@ -11875,7 +11968,31 @@
       ]
     ],
     [
-      8073,
+      8112,
+      [
+        {
+          "TestLessThan": {
+            "lhs": { "Deref": { "register": "AP", "offset": 0 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "dst": { "register": "AP", "offset": -1 }
+          }
+        }
+      ]
+    ],
+    [
+      8132,
+      [
+        {
+          "TestLessThan": {
+            "lhs": { "Deref": { "register": "AP", "offset": 0 } },
+            "rhs": { "Immediate": "0x100000000000000000000000000000000" },
+            "dst": { "register": "AP", "offset": -1 }
+          }
+        }
+      ]
+    ],
+    [
+      8162,
       [
         {
           "TestLessThan": {
@@ -11887,7 +12004,7 @@
       ]
     ],
     [
-      8077,
+      8166,
       [
         {
           "LinearSplit": {
@@ -11901,7 +12018,7 @@
       ]
     ],
     [
-      8088,
+      8177,
       [
         {
           "LinearSplit": {
@@ -11914,9 +12031,9 @@
         }
       ]
     ],
-    [8115, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -32 } } } }]],
+    [8204, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -32 } } } }]],
     [
-      8130,
+      8219,
       [
         {
           "SystemCall": {
@@ -11927,17 +12044,17 @@
         }
       ]
     ],
-    [8133, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [8135, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [8170, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -18 } } } }]],
     [8222, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [8239, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [8265, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [8323, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [8340, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
-    [8366, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [8224, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [8259, [{ "SystemCall": { "system": { "Deref": { "register": "AP", "offset": -18 } } } }]],
+    [8311, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [8328, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [8354, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [8412, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [8429, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [8455, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      8718,
+      8807,
       [
         {
           "TestLessThanOrEqual": {
@@ -11948,9 +12065,9 @@
         }
       ]
     ],
-    [8770, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
+    [8859, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]],
     [
-      8792,
+      8881,
       [
         {
           "TestLessThanOrEqual": {
@@ -11961,9 +12078,9 @@
         }
       ]
     ],
-    [8834, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -10 } } } }]],
+    [8923, [{ "SystemCall": { "system": { "Deref": { "register": "FP", "offset": -10 } } } }]],
     [
-      8842,
+      8931,
       [
         {
           "TestLessThan": {
@@ -11981,7 +12098,7 @@
       ]
     ],
     [
-      8872,
+      8961,
       [
         {
           "TestLessThan": {
@@ -11993,7 +12110,7 @@
       ]
     ],
     [
-      8876,
+      8965,
       [
         {
           "LinearSplit": {
@@ -12007,7 +12124,7 @@
       ]
     ],
     [
-      8887,
+      8976,
       [
         {
           "LinearSplit": {
@@ -12020,78 +12137,83 @@
         }
       ]
     ],
-    [8958, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]]
+    [9047, [{ "AllocSegment": { "dst": { "register": "AP", "offset": 0 } } }]]
   ],
   "entry_points_by_type": {
     "EXTERNAL": [
       {
         "selector": "0x4899f724157ff64b52d42f84cabe90ee77c8029d58ed4da2fe65e9f9ac339",
-        "offset": 0,
+        "offset": 89,
         "builtins": ["pedersen", "range_check", "poseidon"]
       },
       {
         "selector": "0x54ed3b44e062c2512c7d33eb0c6bb551261bef4f17ca9367201ef0f7aa001",
-        "offset": 3992,
+        "offset": 4081,
         "builtins": ["pedersen", "range_check"]
       },
       {
+        "selector": "0x22ff5f21f0b81b113e63f7db6da94fedef11b2119b4088b89664fb9a3cb658",
+        "offset": 0,
+        "builtins": ["range_check"]
+      },
+      {
         "selector": "0x41b033f4a31df8067c24d1e9b550a2ce75fd4a29e1147af9752174f0e6cb20",
-        "offset": 3537,
+        "offset": 3626,
         "builtins": ["pedersen", "range_check"]
       },
       {
         "selector": "0x4c4fb1ab068f6039d5780c68dd0fa2f8742cceb3426d19667778ca7f3518a9",
-        "offset": 2873,
+        "offset": 2962,
         "builtins": ["range_check"]
       },
       {
         "selector": "0x80aa9fdbfaf9615e4afc7f5f722e265daca5ccc655360fa5ccacf9c267936d",
-        "offset": 2966,
+        "offset": 3055,
         "builtins": ["range_check"]
       },
       {
         "selector": "0x83afd3f4caedc6eebf44246fe54e38c95e3179a5ec9ea81740eca5b482d12e",
-        "offset": 1370,
+        "offset": 1459,
         "builtins": ["pedersen", "range_check"]
       },
       {
         "selector": "0x1557182e4359a1f0c6301278e8f5b35a776ab58d39892581e357578fb287836",
-        "offset": 547,
+        "offset": 636,
         "builtins": ["range_check"]
       },
       {
         "selector": "0x1e888a1026b19c8c0b57c72d63ed1737106aa10034105b980ba117bd0c29fe1",
-        "offset": 1118,
+        "offset": 1207,
         "builtins": ["pedersen", "range_check"]
       },
       {
         "selector": "0x216b05c387bab9ac31918a3e61672f4618601f3c598a2f3f2710f37053e1ea4",
-        "offset": 2717,
+        "offset": 2806,
         "builtins": ["range_check", "poseidon"]
       },
       {
         "selector": "0x219209e083275171774dab1df80982e9df2096516f06319c5c6d71ae0a8480c",
-        "offset": 2193,
+        "offset": 2282,
         "builtins": ["pedersen", "range_check"]
       },
       {
         "selector": "0x2e4263afad30923c891518314c3c95dbe830a16874e8abc5777a9a20b54c76e",
-        "offset": 3196,
+        "offset": 3285,
         "builtins": ["pedersen", "range_check"]
       },
       {
         "selector": "0x35a73cd311a05d46deda634c5ee045db92f811b4e74bca4437fcb5302b7af33",
-        "offset": 777,
+        "offset": 866,
         "builtins": ["pedersen", "range_check"]
       },
       {
         "selector": "0x361458367e696363fbcc70777d07ebbd2394e89fd0adcaf147faccd1d294d60",
-        "offset": 2561,
+        "offset": 2650,
         "builtins": ["range_check", "poseidon"]
       },
       {
         "selector": "0x3704ffe8fba161be0e994951751a5033b1462b918ff785c0a636be718dfdb68",
-        "offset": 1738,
+        "offset": 1827,
         "builtins": ["pedersen", "range_check"]
       }
     ],
@@ -12099,7 +12221,7 @@
     "CONSTRUCTOR": [
       {
         "selector": "0x28ffe4ff0f226a9107253e17a904099aa4f63a02a5621de0576e5aa71bc5194",
-        "offset": 4215,
+        "offset": 4304,
         "builtins": ["pedersen", "range_check", "poseidon"]
       }
     ]

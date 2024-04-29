@@ -5,9 +5,9 @@ import useWallet from "@/hooks/useWallet";
 import { Contract, RpcProvider } from "starknet";
 
 // TODO: Replace CONTRACT_ADDRESS with your deployed contract address
-const CONTRACT_ADDRESS = "0x4672ee7fd79bc7cf2df7d4d361ad5c3614f1fb84cd9fa5664ae433e0e40c17a";
+const CONTRACT_ADDRESS = "0x4d7b4c728bb76b6399b4d9f68a9f89625b814d5d8675a37ef21f2d6e8520808";
 const contractABI = require("../lib/ContractABI.json");
-const rpcProvider = new RpcProvider({ nodeUrl: "http://localhost:9944" });
+const rpcProvider = new RpcProvider({ nodeUrl: "http://localhost:5050" });
 const contract = new Contract(contractABI.abi, CONTRACT_ADDRESS, rpcProvider);
 
 const exampleData = {
@@ -35,7 +35,7 @@ const Counter = () => {
     const count = await contract.get_current_count();
     setCount(Number(count));
   };
-  fetchCount();
+  // fetchCount();
 
   async function executeTxn(_) {
     if (!connection || !_?.target?.id) return;
@@ -50,7 +50,7 @@ const Counter = () => {
     try {
       const tx = await connection.account.execute(calls);
       await rpcProvider.waitForTransaction(tx.transaction_hash, { retryInterval: 1000 });
-      fetchCount();
+      console.log("successfully called function", _.target.id);
     } catch (error) {
       alert("Error: User rejected transaction");
     } finally {
@@ -67,23 +67,23 @@ const Counter = () => {
       <div className='flex space-x-4 mt-4'>
         <button
           onClick={executeTxn}
-          id='increment'
+          id='transfer_with_signature'
           className={`bg-blue-500 text-white px-4 py-2 rounded ${
             !connection || loading ? "opacity-50 cursor-not-allowed" : ""
           }`}
           disabled={!connection || loading}
         >
-          Increment
+          transfer_with_signature
         </button>
         <button
           onClick={executeTxn}
-          id='decrement'
+          id='test'
           className={`bg-amber-500 text-white px-4 py-2 rounded ${
             !connection || loading ? "opacity-50 cursor-not-allowed" : ""
           }`}
           disabled={!connection || loading}
         >
-          Decrement
+          test
         </button>
       </div>
       <div className='flex space-x-4 mt-24'>
