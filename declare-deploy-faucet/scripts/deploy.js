@@ -14,31 +14,29 @@ const account = new starknet.Account(
 //0x2288d3c507abfb963730c97a72836222ffe34e0d4fd963dbf9c6e1ecdca5a1
 
 async function main(sierraPath) {
-  const testClassHash = "0xbb2fd7a174dbba0cd5d538691c7cdf21a3b42404e445fc74e36a59be19fa97";
-  const testSierra = starknet.json.parse(
-    fs.readFileSync("./contracts/my_contract_CustomERC20.contract_class.json").toString("ascii")
+  const classHash = "0x3511f232b08dab506e1b72734968f2d09a3fc2db9f9574910663217afb8abe";
+
+  const contract = starknet.json.parse(
+    fs.readFileSync("../contract/target/dev/test_Test.contract_class.json").toString("ascii")
   );
 
-  const myCallData = new starknet.CallData(testSierra.abi);
+  const myCallData = new starknet.CallData(contract.abi);
 
-  const constructor = myCallData.compile("constructor", {
-    initial_supply: 10000,
-    recipient: "0xe29882a1fcba1e7e10cad46212257fea5c752a4f9b1b1ec683c503a2cf5c8a",
-  });
+  const constructorCalldata = myCallData.compile("constructor", {});
 
   const { suggestedMaxFee: estimatedFee1 } = await account.estimateDeployFee({
-    classHash: testClassHash,
-    constructorCalldata: constructor,
+    classHash,
+    constructorCalldata,
   });
 
   const deployResponse = await account.deployContract(
     {
-      classHash: testClassHash,
-      constructorCalldata: constructor,
+      classHash,
+      constructorCalldata,
     },
     { maxFee: (estimatedFee1 * 11n) / 10n }
   );
-  const myTestContract = new starknet.Contract(testSierra.abi, deployResponse.contract_address, provider);
+  const myTestContract = new starknet.Contract(contract.abi, deployResponse.contract_address, provider);
   console.log("✅ Test Contract connected at =", myTestContract.address);
 }
 

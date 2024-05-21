@@ -2,9 +2,8 @@ const starknet = require("starknet");
 const ERC20 = require("../contracts/ERC20.json");
 
 const eth_address = "0x49d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7";
-const provider = new starknet.RpcProvider({
-  nodeUrl: "http://localhost:5050",
-});
+const provider = new starknet.RpcProvider({ nodeUrl: "http://0.0.0.0:5050" });
+
 const account = new starknet.Account(
   provider,
   "0xb3ff441a68610b30fd5e2abbf3a1548eb6ba6f3559f2862bf2dc757e5828ca",

@@ -8,12 +8,10 @@ use starknet::ContractAddress;
 const MESSAGE_TYPE_HASH: felt252 =
     0x120ae1bdaf7c1e48349da94bb8dad27351ca115d6605ce345aee02d68d99ec1;
 
+
 #[derive(Copy, Drop, Hash)]
 struct Message {
-    recipient: ContractAddress,
-    amount: u256,
-    nonce: felt252,
-    expiry: u64
+    to: ContractAddress,
 }
 
 impl StructHashImpl of StructHash<Message> {
@@ -83,31 +81,19 @@ mod CustomERC20 {
     #[external(v0)]
     fn transfer_with_signature(
         ref self: ContractState,
-        recipient: ContractAddress,
-        amount: u256,
-        nonce: felt252,
-        expiry: u64,
+        to: ContractAddress,
         signature: Array<felt252>
     ) {
-        assert(starknet::get_block_timestamp() <= expiry, 'Expired signature');
-        let owner = starknet::get_caller_address();
-
-        // Check and increase nonce
-        self.nonces.use_checked_nonce(owner, nonce);
-
         // Build hash for calling `is_valid_signature`
-        let message = Message { recipient, amount, nonce, expiry };
-        let hash = message.get_message_hash(owner);
+        let message = Message { to };
+        let hash = message.get_message_hash(to);
 
-        let is_valid_signature_felt = DualCaseAccount { contract_address: owner }
+        let is_valid_signature_felt = DualCaseAccount { contract_address: to }
             .is_valid_signature(hash, signature);
 
         // Check either 'VALID' or True for backwards compatibility
-        let is_valid_signature = is_valid_signature_felt == starknet::VALIDATED
-            || is_valid_signature_felt == 1;
-        assert(is_valid_signature, 'Invalid signature');
-
-        // Transfer tokens
-        self.erc20._transfer(owner, recipient, amount);
+        // let is_valid_signature = is_valid_signature_felt == starknet::VALIDATED
+        //     || is_valid_signature_felt == 1;
+        // assert(is_valid_signature, 'Invalid signature');
     }
 }

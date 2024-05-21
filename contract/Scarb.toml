@@ -1,13 +1,20 @@
 [package]
-name = "counter_contract"
+name = "test"
 version = "0.1.0"
 edition = "2023_11"
 
 # See more keys and their definitions at https://docs.swmansion.com/scarb/docs/reference/manifest.html
 
 [dependencies]
-starknet = ">=2.1.0"
+starknet = ">=2.6.3"
 openzeppelin = { git = "https://github.com/OpenZeppelin/cairo-contracts.git", tag = "v0.11.0" }
 
 [[target.starknet-contract]]
 casm = true
+
+[scripts]
+SimpleStruct= "npx ts-node scripts/SimpleStruct.ts"
+StructWithArray= "npx ts-node scripts/StructWithArray.ts"
+StructWithMerkletree= "npx ts-node scripts/StructWithMerkletree.ts"
+StructWithU256= "npx ts-node scripts/StructWithU256.ts"
+format = "scarb fmt && npx prettier --write ."
