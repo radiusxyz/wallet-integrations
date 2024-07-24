@@ -1,0 +1,18 @@
+const exampleData = {
+  "types": {
+    "StarkNetDomain": [{ "name": "version", "type": "felt" }],
+    "Msg": [{ "name": "contents", "type": "felt" }],
+  },
+  "primaryType": "Msg",
+  "domain": {
+    "version": "1",
+  },
+  "message": {
+    "contents": "Hello World",
+  },
+};
+
+
+
+
+openzeppelin = { git = "https://github.com/OpenZeppelin/cairo-contracts.git", tag = "v0.7.0" }
